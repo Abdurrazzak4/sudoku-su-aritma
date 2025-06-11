@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../images/logo-removebg.png';
 
 function Navbar() {
   const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
@@ -6,7 +7,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg">
       <div className="container">
         <a className="navbar-brand fw-bold d-flex align-items-center" href={isHome ? "#hero" : "/"}>
-          <img src="/logo-removebg.png" alt="Sudoku Su Arıtma Logo" />
+          <img src={logo} alt="Sudoku Su Arıtma Logo" />
           <span>Sudoku Su Arıtma</span>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç/Kapat">

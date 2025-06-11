@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import ContactForm from './components/ContactForm';
 import FaqAccordion from './components/FaqAccordion';
 import Hizmetler from './components/Hizmetler';
+import heroImage from './images/image.png';
 
 function App() {
   const [message, setMessage] = useState('');
