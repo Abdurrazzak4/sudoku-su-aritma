@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+
 function ContactForm({ iletisimRef, message, setMessage }) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -10,7 +12,7 @@ function ContactForm({ iletisimRef, message, setMessage }) {
     setStatus('Gönderiliyor...');
 
     try {
-      const response = await fetch('http://localhost:5000/send-email', {
+      const response = await fetch(`${API_URL}/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
